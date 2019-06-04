@@ -1,7 +1,6 @@
-package com.kotlin.demo.recycler.ui
+package com.kotlin.demo.cricket.recyclerview.ui
 
 import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
@@ -9,7 +8,7 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.kotlin.demo.R
 import com.kotlin.demo.databinding.ActivityRecyclerBinding
-import com.kotlin.demo.recycler.dto.PlayerModel
+import com.kotlin.demo.cricket.recyclerview.dto.PlayerModel
 
 class PlayerRecyclerActivity : AppCompatActivity() {
 
@@ -32,7 +31,6 @@ class PlayerRecyclerActivity : AppCompatActivity() {
     }
 
     fun getPlayerData(){
-
         playerRecyclerViewModel.getAllPlayer().observe(this, Observer<List<PlayerModel>> { playerModelList->
             playerRecyclerAdapter = PlayerRecyclerAdapter(this, playerModelList)
             binding.recyclerView.adapter = playerRecyclerAdapter

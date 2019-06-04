@@ -1,4 +1,4 @@
-package com.kotlin.demo.recycler.ui
+package com.kotlin.demo.cricket.recyclerview.ui
 
 import android.content.Context
 import android.databinding.DataBindingUtil
@@ -7,9 +7,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.kotlin.demo.R
-import com.kotlin.demo.base.FormatConverter
+import com.kotlin.demo.base.utils.FormatConverter
+import com.kotlin.demo.cricket.recyclerview.dto.PlayerModel
 import com.kotlin.demo.databinding.AdapterPlayerBinding
-import com.kotlin.demo.recycler.dto.PlayerModel
 
 class PlayerRecyclerAdapter(private val context : Context, private val playersList:List<PlayerModel>?) : RecyclerView.Adapter<PlayerRecyclerAdapter.ViewHolder>() {
 
@@ -25,10 +25,10 @@ class PlayerRecyclerAdapter(private val context : Context, private val playersLi
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         playerModel = playersList!!.get(position)
-        holder.binding.playerCreditTv.setText(FormatConverter.convertIntToString(playerModel.playerCredit))
-        holder.binding.playerPointTv.setText(FormatConverter.convertIntToString(playerModel.playerPoint))
+        holder.binding.playerCreditTv.setText(FormatConverter.convertIntToString(playerModel.playerCredit!!))
+        holder.binding.playerPointTv.setText(FormatConverter.convertIntToString(playerModel.playerPoint!!))
         Glide.with(context).load(playerModel.playerImage).into(adapterPlayerBinding.playerImageView)
-        holder.binding.playerModel = playerModel
+        holder.binding.playerModel  =playerModel
 
     }
 

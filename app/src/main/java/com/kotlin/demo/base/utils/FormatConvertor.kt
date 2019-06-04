@@ -1,4 +1,4 @@
-package com.kotlin.demo.base
+package com.kotlin.demo.base.utils
 
 import android.databinding.InverseMethod
 
