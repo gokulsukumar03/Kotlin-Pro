@@ -6,6 +6,7 @@ import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.WindowManager
 import com.kotlin.demo.R
 import com.kotlin.demo.databinding.ActivityRecyclerBinding
 import com.kotlin.demo.cricket.recyclerview.dto.PlayerModel
@@ -19,6 +20,7 @@ class PlayerRecyclerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_recycler)
         playerRecyclerViewModel = ViewModelProviders.of(this).get(PlayerRecyclerViewModel::class.java)
         renderView()

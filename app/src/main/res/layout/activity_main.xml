@@ -7,11 +7,12 @@
         android:layout_height="match_parent"
         tools:context=".basic.SplashActivity">
 
-    <ImageView
+    <com.kotlin.demo.base.custom.CustomTextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/ipl"
-            android:scaleType="fitXY"
+            android:layout_height="wrap_content"
+            android:text="Hellow Sukumar..."
+            android:gravity="center"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"

@@ -11,7 +11,11 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name="com.kotlin.demo.cricket.recyclerview.ui.PlayerRecyclerActivity">
+        <activity android:name=".basic.BasicActivity">
+        </activity>
+        <activity android:name=".cricket.singlerecyclerview.SinglePlayerRecyclerActivity">
+        </activity>
+        <activity android:name=".cricket.recyclerview.ui.PlayerRecyclerActivity">
         </activity>
         <activity android:name=".basic.SplashActivity">
             <intent-filter>
