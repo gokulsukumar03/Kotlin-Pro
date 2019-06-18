@@ -5,6 +5,6 @@ import io.reactivex.Single
 import retrofit2.http.GET
 
 interface AppWebServices {
-    @GET("mrl67")
+    @GET(RemoteConstant.GET_PLAYER)
     fun getAllPlayerData(): Single<PlayerDetailsModel>
 }

@@ -3,6 +3,7 @@ package com.kotlin.demo.base.remote
 class RemoteConstant {
 
     companion object {
-        var BASE_URL: String = "my/api/url"
+        const val BASE_URL: String = "https://api.myjson.com/bins/"
+        const val GET_PLAYER : String  = "mrl67"
     }
 }

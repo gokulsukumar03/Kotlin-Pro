@@ -17,7 +17,7 @@
         </activity>
         <activity android:name=".cricket.recyclerview.ui.PlayerRecyclerActivity">
         </activity>
-        <activity android:name=".basic.SplashActivity">
+        <activity android:name=".home.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

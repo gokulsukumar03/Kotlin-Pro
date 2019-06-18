@@ -1,11 +1,14 @@
-package com.kotlin.demo.basic
+package com.kotlin.demo.home
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.WindowManager
 import com.kotlin.demo.R
+import com.kotlin.demo.basic.BasicConstructorModel
+import com.kotlin.demo.basic.BasicModel
 import com.kotlin.demo.cricket.recyclerview.ui.PlayerRecyclerActivity
 
 class SplashActivity : AppCompatActivity() {
@@ -19,9 +22,16 @@ class SplashActivity : AppCompatActivity() {
         mRunnable = Runnable { startActivity(Intent(this, PlayerRecyclerActivity::class.java)) }
         mHandler.postDelayed(mRunnable, 2000)
 
+        testData()
+
     }
     override fun onStop() {
         mHandler.removeCallbacks(mRunnable)
         super.onStop()
+    }
+
+
+    fun testData(){
+
     }
 }

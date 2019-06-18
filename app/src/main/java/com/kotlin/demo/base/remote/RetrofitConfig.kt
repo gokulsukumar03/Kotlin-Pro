@@ -15,7 +15,7 @@ class RetrofitConfig<T> {
                 .addCallAdapterFactory(
                     RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("https://api.myjson.com/bins/")
+                .baseUrl(RemoteConstant.BASE_URL)
                 .build()
 
             return retrofit.create(AppWebServices::class.java)
