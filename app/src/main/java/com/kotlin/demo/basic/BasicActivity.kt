@@ -4,7 +4,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.kotlin.demo.R
+import com.kotlin.demo.home.AppConstant
 
+// https://kotlinlang.org/docs/reference/
 class BasicActivity : AppCompatActivity() {
 
     var myByte: Byte = 0// 8 bit
@@ -91,7 +93,7 @@ class BasicActivity : AppCompatActivity() {
             emptyStringArray.set(index, countryList[index])
         }
         for (country in emptyStringArray) {
-            Log.d("data!!!", country)
+            Log.d(AppConstant.LogCatName, country)
         }
     }
 
@@ -119,11 +121,22 @@ class BasicActivity : AppCompatActivity() {
         }
 
         for (i in 6 downTo 0 step 2) {
-            Log.d("data !!!", String.format("%s", i))
+            Log.d(AppConstant.LogCatName, String.format("%s", i))
             /*  2019-06-18 17:12:46.863 11665-11665/com.kotlin.demo D/data !!!: 6
                 2019-06-18 17:12:46.863 11665-11665/com.kotlin.demo D/data !!!: 4
                 2019-06-18 17:12:46.863 11665-11665/com.kotlin.demo D/data !!!: 2
                 2019-06-18 17:12:46.864 11665-11665/com.kotlin.demo D/data !!!: 0*/
+        }
+    }
+
+    fun switchExample(x : Int){
+
+        when (x) {
+            1 -> Log.d("switch", "1")
+            2 -> Log.d("switch", "1")
+            else -> { // Note the block
+                Log.d(AppConstant.LogCatName, "default")
+            }
         }
     }
 
@@ -137,18 +150,35 @@ class BasicActivity : AppCompatActivity() {
         basicModel.isActive = true
         basicModel.percentage = 89.0
 
-        Log.d("basic !!! data", basicModel.name)
-        Log.d("basic !!! data", basicModel.gender.toString())
-        Log.d("basic !!! data", basicModel.id.toString())
-        Log.d("basic !!! data", basicModel.isActive.toString())
-        Log.d("basic !!! data", basicModel.percentage.toString())
+        Log.d(AppConstant.LogCatName, basicModel.name)
+        Log.d(AppConstant.LogCatName, basicModel.gender.toString())
+        Log.d(AppConstant.LogCatName, basicModel.id.toString())
+        Log.d(AppConstant.LogCatName, basicModel.isActive.toString())
+        Log.d(AppConstant.LogCatName, basicModel.percentage.toString())
     }
 
-    /*Model Constructor*/
-    fun modelConstructorExample() {
-        var basicConstructorModel = BasicConstructorModel("Gokul")
-        Log.d("basic !!! constructor", basicConstructorModel.userName)
+    /*Primary Constructor*/
+    fun primaryConstructorExample() {
+        var primaryConstructorModel = PrimaryConstructorModel("Gokul")
+        Log.d(AppConstant.LogCatName, primaryConstructorModel.userName)
     }
+
+    /*Secondary Constructor*/
+    fun secondaryConstructorExample(){
+        var secondaryConstructorModel = SecondaryConstructorModel("Gokul Sukumar", 28)
+
+        // Print right side value if the value is empty
+        Log.d(AppConstant.LogCatName, secondaryConstructorModel.userName?: "Empty Data")
+
+        if(!secondaryConstructorModel.userName.isNullOrEmpty()){
+            Log.d(AppConstant.LogCatName, secondaryConstructorModel.userName)
+        }
+
+        if (secondaryConstructorModel.userAge!! > 0) {
+            Log.d(AppConstant.LogCatName, secondaryConstructorModel.userAge!!.toString())
+        }
+    }
+
 
     lateinit var userList: ArrayList<BasicModel>
     lateinit var basicModel: BasicModel

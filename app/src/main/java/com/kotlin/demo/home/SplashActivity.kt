@@ -7,8 +7,7 @@ import android.os.Handler
 import android.util.Log
 import android.view.WindowManager
 import com.kotlin.demo.R
-import com.kotlin.demo.basic.BasicConstructorModel
-import com.kotlin.demo.basic.BasicModel
+import com.kotlin.demo.basic.SecondaryConstructorModel
 import com.kotlin.demo.cricket.recyclerview.ui.PlayerRecyclerActivity
 
 class SplashActivity : AppCompatActivity() {
@@ -25,13 +24,15 @@ class SplashActivity : AppCompatActivity() {
         testData()
 
     }
+
     override fun onStop() {
         mHandler.removeCallbacks(mRunnable)
         super.onStop()
     }
 
 
-    fun testData(){
+    fun testData() {
 
     }
+
 }
