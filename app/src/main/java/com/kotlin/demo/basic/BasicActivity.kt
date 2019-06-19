@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import com.kotlin.demo.R
 import com.kotlin.demo.home.AppConstant
+import com.kotlin.demo.java.DataTypeConvert
 
 // https://kotlinlang.org/docs/reference/
 class BasicActivity : AppCompatActivity() {
@@ -177,6 +178,18 @@ class BasicActivity : AppCompatActivity() {
         if (secondaryConstructorModel.userAge!! > 0) {
             Log.d(AppConstant.LogCatName, secondaryConstructorModel.userAge!!.toString())
         }
+    }
+
+    /*Use Java in Kotlin*/
+    fun getStaticDataFromJavaClass(){
+        var data: String? = DataTypeConvert.convertIntToString(5)
+        Log.d(AppConstant.LogCatName, data?: "No Data")
+    }
+
+    fun getDataFromJavaClass(){
+        var value : Int?
+        value = DataTypeConvert().convertStringToInteger("50")
+        Log.d(AppConstant.LogCatName, value.toString())
     }
 
 
