@@ -24,9 +24,9 @@ class PlayerRecyclerAdapter(private val context : Context, private val playersLi
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        playerModel = playersList!!.get(position)
-        holder.binding.playerCreditTv.setText(FormatConverter.convertIntToString(playerModel.playerCredit!!))
-        holder.binding.playerPointTv.setText(FormatConverter.convertIntToString(playerModel.playerPoint!!))
+        playerModel = playersList!![position]
+        holder.binding.playerCreditTv.text = FormatConverter.convertIntToString(playerModel.playerCredit!!)
+        holder.binding.playerPointTv.text = FormatConverter.convertIntToString(playerModel.playerPoint!!)
         Glide.with(context).load(playerModel.playerImage).into(adapterPlayerBinding.playerImageView)
         holder.binding.playerModel  =playerModel
 
@@ -39,11 +39,7 @@ class PlayerRecyclerAdapter(private val context : Context, private val playersLi
 
 
 
-    inner class ViewHolder(adapterPlayerBinding: AdapterPlayerBinding) : RecyclerView.ViewHolder(adapterPlayerBinding.root) {
-
-        var binding: AdapterPlayerBinding = adapterPlayerBinding
-
-    }
+    inner class ViewHolder(var binding: AdapterPlayerBinding) : RecyclerView.ViewHolder(adapterPlayerBinding.root)
 
 
 }

@@ -2,16 +2,9 @@ package com.kotlin.demo.home
 
 class HomeModel<T> {
 
+    // get and set is not required, learning purpose coded
     var title : String?=null
-    get() =field
-    set(value) {
-        field=value
-    }
 
     var activityName : Class<T>?=null
-    get() = field
-    set(value) {
-        field=value
-    }
 
 }

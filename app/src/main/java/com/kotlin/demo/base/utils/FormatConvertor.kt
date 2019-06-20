@@ -7,7 +7,7 @@ class FormatConverter {
 
     companion object {
         @InverseMethod(value="convertIntToString")
-        public fun convertIntToString(value: Int): String {
+        fun convertIntToString(value: Int): String {
             return String.format("%s", value)
         }
     }

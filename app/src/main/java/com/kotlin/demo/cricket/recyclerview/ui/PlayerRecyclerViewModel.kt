@@ -8,7 +8,6 @@ import com.kotlin.demo.base.remote.AppWebServices
 import com.kotlin.demo.base.remote.RetrofitConfig
 import com.kotlin.demo.cricket.recyclerview.dto.PlayerModel
 import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
 class PlayerRecyclerViewModel : ViewModel() {
@@ -18,12 +17,12 @@ class PlayerRecyclerViewModel : ViewModel() {
 
     fun getAllPlayer(): LiveData<List<PlayerModel>> {
         getAllUserFromApi()
-        return playerModelListMutableLiveData;
+        return playerModelListMutableLiveData
     }
 
     @SuppressLint("CheckResult")
     private fun getAllUserFromApi() {
-        var appWebServices: AppWebServices = RetrofitConfig.create()
+        val appWebServices: AppWebServices = RetrofitConfig.create()
         appWebServices.getAllPlayerData()
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
@@ -31,7 +30,7 @@ class PlayerRecyclerViewModel : ViewModel() {
                     playerDetailsModel ->
                 playerModelListMutableLiveData.value = playerDetailsModel.player
             }, { error ->
-                error.message;
+                error.message
             })
 
     }

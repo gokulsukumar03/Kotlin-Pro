@@ -1,15 +1,18 @@
 package com.kotlin.demo.home
 import android.arch.lifecycle.Observer
-import android.content.Intent
+import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.os.TokenWatcher
-import android.widget.Toast
+import android.support.v7.widget.LinearLayoutManager
 import com.kotlin.demo.R
 import com.kotlin.demo.base.activity.BaseActivity
+import com.kotlin.demo.databinding.ActivityHomeBinding
 
 class HomeActivity : BaseActivity() {
 
-    private lateinit var homeViewModel: HomeViewModel;
+    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var binding : ActivityHomeBinding
+    private lateinit var layoutManager: LinearLayoutManager
+    private lateinit var homeAdapter: HomeAdapter
 
     override fun getScreenName(): String {
         return localClassName
@@ -17,7 +20,7 @@ class HomeActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_home)
     }
 
     override fun onResume() {
@@ -30,9 +33,12 @@ class HomeActivity : BaseActivity() {
         homeViewModel.getFeatureData().observe(this, Observer<List<HomeModel<Any>>> {
             featureList->
             for(feature in featureList!!){
-                Toast.makeText(this@HomeActivity, feature.activityName.toString(), Toast.LENGTH_SHORT).show()
-
-                startActivity(Intent(this@HomeActivity, feature.activityName))
+                layoutManager = LinearLayoutManager(this@HomeActivity)
+                homeAdapter = HomeAdapter(featureList)
+                binding.recyclerView.layoutManager=layoutManager
+                binding.recyclerView.adapter= homeAdapter
+              /*  Toast.makeText(this@HomeActivity, feature.activityName.toString(), Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this@HomeActivity, feature.activityName))*/
             }
 
         })

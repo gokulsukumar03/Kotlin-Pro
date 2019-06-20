@@ -30,7 +30,7 @@ class BasicActivity : AppCompatActivity() {
 
     /*lateinit*/
     // Allows initializing outsize constructor
-    private lateinit var lateInitVariable: String;
+    private lateinit var lateInitVariable: String
 
     /*static*/
     companion object {
@@ -54,11 +54,11 @@ class BasicActivity : AppCompatActivity() {
     }
 
     fun returnStringExample(): String {
-        return "Sukumar";
+        return "Sukumar"
     }
 
     fun withParameterExample(value: String) {
-        var data: String = value;
+        var data: String = value
     }
 
     fun conditionWhileOperationExample() {

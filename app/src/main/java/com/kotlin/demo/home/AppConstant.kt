@@ -2,6 +2,6 @@ package com.kotlin.demo.home
 
 class AppConstant {
     companion object {
-        val LogCatName: String = "Kotlin !!!  "
+        const val LogCatName: String = "Kotlin !!!  "
     }
 }

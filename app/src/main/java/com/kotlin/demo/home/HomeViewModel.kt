@@ -14,7 +14,7 @@ class HomeViewModel : ViewModel(){
 
      fun getFeatureData() : LiveData<List<HomeModel<Any>>>{
         generateFeatureData()
-        return featureMutableLiveData;
+        return featureMutableLiveData
     }
 
 
