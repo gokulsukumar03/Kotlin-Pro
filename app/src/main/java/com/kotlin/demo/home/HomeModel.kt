@@ -7,4 +7,6 @@ class HomeModel<T> {
 
     var activityName : Class<T>?=null
 
+
+
 }

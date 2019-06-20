@@ -10,6 +10,7 @@ import com.kotlin.demo.databinding.AdapterHomeBinding
 
 class HomeAdapter(private val featureList : List<HomeModel<Any>>) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
 
+
     private lateinit var binding: AdapterHomeBinding
     private lateinit var layoutInflater: LayoutInflater
     private lateinit var homeModel: HomeModel<Any>
@@ -27,7 +28,7 @@ class HomeAdapter(private val featureList : List<HomeModel<Any>>) : RecyclerView
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         homeModel = featureList[position]
         holder.binding.homeModel=homeModel
-        holder.binding.cardView.setOnClickListener { holder.binding.rootLayout.context.startActivity(Intent(holder.binding.rootLayout.context, homeModel.activityName))}
+        holder.binding.cardView.setOnClickListener { holder.binding.rootLayout.context.startActivity(Intent(holder.binding.rootLayout.context, featureList[position].activityName))}
     }
 
     inner class ViewHolder(var binding: AdapterHomeBinding) : RecyclerView.ViewHolder(binding.root)

@@ -1,14 +1,24 @@
 package com.kotlin.demo.basic
 
+import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.kotlin.demo.R
+import com.kotlin.demo.base.activity.BaseActivity
+import com.kotlin.demo.databinding.ActivityBasicBinding
 import com.kotlin.demo.home.AppConstant
 import com.kotlin.demo.java.DataTypeConvert
 
 // https://kotlinlang.org/docs/reference/
-class BasicActivity : AppCompatActivity() {
+class BasicActivity : BaseActivity() {
+
+    lateinit var binding: ActivityBasicBinding
+
+
+    override fun getScreenName(): String {
+        return localClassName
+    }
 
     var myByte: Byte = 0// 8 bit
     var myShort: Short = 0//16 bit
@@ -23,7 +33,7 @@ class BasicActivity : AppCompatActivity() {
     var myBoolean: Boolean = false//1 bit
 
     /*Constant Value Never change again*/
-    val constantValue: String = "Kotlin"
+     val  constantValue: String = "Kotlin"
 
     /*Non Constant Value, can change the value*/
     var nonConstantValue: String = "Android"
@@ -34,9 +44,9 @@ class BasicActivity : AppCompatActivity() {
 
     /*static*/
     companion object {
-        private val staticVariable: String = "BasicActivity"
+        public val staticVariable: String = "BasicActivity"
         /*Const*/
-        private const val constantVariable: String = "Constant Variable"
+        public const val constantVariable: String = "Constant Variable"
     }
 
 
@@ -49,9 +59,48 @@ class BasicActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_basic)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_basic)
+        binding.toolBar.setTitle(localClassName)
+        setSupportActionBar(binding.toolBar)
         nonConstantValue = "Kotlin"
     }
+
+    override fun onResume() {
+        super.onResume()
+
+        binding.dataTypeTv.setText(
+                    "var myByte: Byte = 0\n" +
+                    "var myShort: Short = 0\n"+
+                    "var myInt: Int = 0\n"+
+                    "var myLong: Long = 0\n"+
+                    "var myFloat: Float = 0.0f\n"+
+                    "var myDouble: Double = 0.0\n"+
+                    "var myChar: Char = '\\u0000'\n"+
+                    "lateinit var myString: String\n"+
+                    "var myBoolean: Boolean = false")
+
+
+        binding.valTv.setText("val  constantValue: String = \"Kotlin\"\n"+
+                "constantValue = \"Android\"\n"+
+                "//error val cannot be re-assign")
+
+
+        binding.varTv.setText("var nonConstantValue: String = \"Android\"\n"+
+                "nonConstantValue = \"Kotlin\"")
+
+        binding.staticTv.setText("companion object {\n" +
+                "        private val staticVariable: String = \"BasicActivity\"\n" +
+                "        /*Const*/\n" +
+                "        private const val constantVariable: String = \"Constant Variable\"\n" +
+                "    }")
+
+        binding.lateInitTv.setText("private lateinit var lateInitVariable: String\n" +
+                "// Allows initializing outsize constructor")
+
+
+
+    }
+
 
     fun returnStringExample(): String {
         return "Sukumar"
@@ -130,7 +179,7 @@ class BasicActivity : AppCompatActivity() {
         }
     }
 
-    fun switchExample(x : Int){
+    fun switchExample(x: Int) {
 
         when (x) {
             1 -> Log.d("switch", "1")
@@ -165,13 +214,13 @@ class BasicActivity : AppCompatActivity() {
     }
 
     /*Secondary Constructor*/
-    fun secondaryConstructorExample(){
+    fun secondaryConstructorExample() {
         var secondaryConstructorModel = SecondaryConstructorModel("Gokul Sukumar", 28)
 
         // Print right side value if the value is empty
-        Log.d(AppConstant.LogCatName, secondaryConstructorModel.userName?: "Empty Data")
+        Log.d(AppConstant.LogCatName, secondaryConstructorModel.userName ?: "Empty Data")
 
-        if(!secondaryConstructorModel.userName.isNullOrEmpty()){
+        if (!secondaryConstructorModel.userName.isNullOrEmpty()) {
             Log.d(AppConstant.LogCatName, secondaryConstructorModel.userName)
         }
 
@@ -181,13 +230,13 @@ class BasicActivity : AppCompatActivity() {
     }
 
     /*Use Java in Kotlin*/
-    fun getStaticDataFromJavaClass(){
+    fun getStaticDataFromJavaClass() {
         var data: String? = DataTypeConvert.convertIntToString(5)
-        Log.d(AppConstant.LogCatName, data?: "No Data")
+        Log.d(AppConstant.LogCatName, data ?: "No Data")
     }
 
-    fun getDataFromJavaClass(){
-        var value : Int?
+    fun getDataFromJavaClass() {
+        var value: Int?
         value = DataTypeConvert().convertStringToInteger("50")
         Log.d(AppConstant.LogCatName, value.toString())
     }
@@ -199,14 +248,14 @@ class BasicActivity : AppCompatActivity() {
     fun arrayListExample() {
         basicModel = BasicModel()
         userList = ArrayList()
-        basicModel.name="Sukumar"
-        basicModel.gender='M'
-        basicModel.id=3
-        basicModel.isActive=true
-        basicModel.percentage=40.3
+        basicModel.name = "Sukumar"
+        basicModel.gender = 'M'
+        basicModel.id = 3
+        basicModel.isActive = true
+        basicModel.percentage = 40.3
         userList.add(basicModel)
 
-        for(userData in userList.indices){
+        for (userData in userList.indices) {
 
         }
 
