@@ -12,8 +12,12 @@ abstract class BaseActivity : AppCompatActivity() {
 
     abstract fun getScreenName() : String
 
+    abstract fun setFullScreen() : Boolean
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if(setFullScreen()){ window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)}
+        setContentView(R.layout.activity_main)
         setStatusBarColor()
         Toast.makeText(applicationContext,getScreenName(),Toast.LENGTH_SHORT).show()
     }

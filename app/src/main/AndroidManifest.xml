@@ -13,8 +13,9 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.kotlin.demo.fragment.basic.BasicFragmentActivity">
-        </activity>
+        <activity android:name=".fragment.fragmenttab.FragmentTabActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".fragment.basic.BasicFragmentActivity" android:screenOrientation="portrait"/>
         <activity
                 android:name=".home.HomeActivity"
                 android:screenOrientation="portrait"/>

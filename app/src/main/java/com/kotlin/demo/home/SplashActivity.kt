@@ -6,8 +6,17 @@ import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.view.WindowManager
 import com.kotlin.demo.R
+import com.kotlin.demo.base.activity.BaseActivity
 
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : BaseActivity() {
+    override fun getScreenName(): String {
+        return localClassName
+    }
+
+    override fun setFullScreen(): Boolean {
+        return true
+    }
+
     private lateinit var mHandler: Handler
     private lateinit var mRunnable: Runnable
     override fun onCreate(savedInstanceState: Bundle?) {

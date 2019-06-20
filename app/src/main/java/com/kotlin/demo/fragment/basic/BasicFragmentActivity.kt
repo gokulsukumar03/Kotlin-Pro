@@ -10,6 +10,11 @@ import com.kotlin.demo.base.activity.BaseActivity
 import com.kotlin.demo.databinding.ActivityContestBinding
 
 class BasicFragmentActivity : BaseActivity() {
+
+    override fun setFullScreen(): Boolean {
+        return false
+    }
+
     override fun getScreenName(): String {
         return localClassName
     }

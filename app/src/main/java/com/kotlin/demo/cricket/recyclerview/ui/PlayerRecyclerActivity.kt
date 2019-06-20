@@ -8,10 +8,18 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.WindowManager
 import com.kotlin.demo.R
+import com.kotlin.demo.base.activity.BaseActivity
 import com.kotlin.demo.databinding.ActivityRecyclerBinding
 import com.kotlin.demo.cricket.recyclerview.dto.PlayerModel
 
-class PlayerRecyclerActivity : AppCompatActivity() {
+class PlayerRecyclerActivity : BaseActivity() {
+    override fun setFullScreen(): Boolean {
+        return false
+    }
+
+    override fun getScreenName(): String {
+        return localClassName
+    }
 
     private lateinit var binding: ActivityRecyclerBinding
     private lateinit var linearLayoutManager: LinearLayoutManager

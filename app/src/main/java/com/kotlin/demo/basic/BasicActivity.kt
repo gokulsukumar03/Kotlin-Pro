@@ -12,6 +12,9 @@ import com.kotlin.demo.java.DataTypeConvert
 
 // https://kotlinlang.org/docs/reference/
 class BasicActivity : BaseActivity() {
+    override fun setFullScreen(): Boolean {
+      return false
+    }
 
     lateinit var binding: ActivityBasicBinding
 

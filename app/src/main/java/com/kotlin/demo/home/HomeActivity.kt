@@ -8,6 +8,9 @@ import com.kotlin.demo.base.activity.BaseActivity
 import com.kotlin.demo.databinding.ActivityHomeBinding
 
 class HomeActivity : BaseActivity() {
+    override fun setFullScreen(): Boolean {
+        return false
+    }
 
     private lateinit var homeViewModel: HomeViewModel
     private lateinit var binding : ActivityHomeBinding
