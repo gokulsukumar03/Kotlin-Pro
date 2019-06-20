@@ -5,6 +5,7 @@ import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.kotlin.demo.basic.BasicActivity
 import com.kotlin.demo.cricket.recyclerview.ui.PlayerRecyclerActivity
+import com.kotlin.demo.fragment.basic.BasicFragmentActivity
 
 class HomeViewModel : ViewModel(){
 
@@ -27,6 +28,11 @@ class HomeViewModel : ViewModel(){
         homeModel = HomeModel()
         homeModel.title = "Basic Recycler View"
         homeModel.activityName = PlayerRecyclerActivity().javaClass
+        homeModelList.add(homeModel)
+
+        homeModel = HomeModel()
+        homeModel.title = "Basic Fragment"
+        homeModel.activityName = BasicFragmentActivity().javaClass
         homeModelList.add(homeModel)
 
         featureMutableLiveData.value = homeModelList

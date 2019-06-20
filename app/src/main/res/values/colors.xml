@@ -14,9 +14,9 @@
     <color name="default_black">#14000000</color>
     <color name="default_fill_color">#ffffff</color>
 
-    <color name="colorPrimary">#202020</color>
-    <color name="colorPrimaryDark">#151515</color>
-    <color name="colorAccent">#202020</color>
+    <color name="colorPrimary">#2B7AB4</color>
+    <color name="colorPrimaryDark">#99C7E9</color>
+    <color name="colorAccent">#2D5FA6</color>
     <color name="blackopacity">#454545</color>
     <color name="colorMedium">#202020</color>
     <color name="colorBackground">#202020</color>

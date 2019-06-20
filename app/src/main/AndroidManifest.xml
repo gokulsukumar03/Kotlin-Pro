@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools" package="com.kotlin.demo">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.kotlin.demo">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -12,23 +13,29 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-
-        <activity android:name=".home.HomeActivity" android:screenOrientation="portrait"/>
-
-        <activity android:name=".basic.BasicActivity" android:screenOrientation="portrait"/>
-
-        <activity android:name=".cricket.singlerecyclerview.SinglePlayerRecyclerActivity" android:screenOrientation="portrait"/>
-
-        <activity android:name=".cricket.recyclerview.ui.PlayerRecyclerActivity" android:screenOrientation="portrait"/>
-
-        <activity android:name=".home.SplashActivity" android:screenOrientation="portrait">
+        <activity android:name="com.kotlin.demo.fragment.basic.BasicFragmentActivity">
+        </activity>
+        <activity
+                android:name=".home.HomeActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".basic.BasicActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".cricket.singlerecyclerview.SinglePlayerRecyclerActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".cricket.recyclerview.ui.PlayerRecyclerActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".home.SplashActivity"
+                android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
