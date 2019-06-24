@@ -1,0 +1,40 @@
+{
+  "category": [
+    {
+    "id" : 1,
+    "title": "Comedy",
+    "movies": [{
+      "rating": 8,
+      "title": "Droid Runner 2049",
+      "posterUri": "droid_runner",
+      "overview": "A young droid runner's discovery of a long-buried secret leads him to track down former droid runner Rick Droid, who's been missing for thirty years."
+    },
+      {
+        "title": "Wonder Droid",
+        "rating": 7,
+        "posterUri": "wonder_droid",
+        "overview": "A Google droid comes to the world of Man to become the greatest of the droid superheroes."
+      }
+    ]
+
+  },
+    {
+      "id" : 2,
+      "title": "Action",
+      "movies": [{
+        "rating": 8,
+        "title": "Droid Runner 2049",
+        "posterUri": "droid_runner",
+        "overview": "A young droid runner's discovery of a long-buried secret leads him to track down former droid runner Rick Droid, who's been missing for thirty years."
+      },
+        {
+          "title": "Wonder Droid",
+          "rating": 7,
+          "posterUri": "wonder_droid",
+          "overview": "A Google droid comes to the world of Man to become the greatest of the droid superheroes."
+        }
+      ]
+
+    }
+  ]
+}
