@@ -40,7 +40,7 @@ class FragmentTabActivity : BaseActivity() {
             adapter = FragmentTabAdapter(supportFragmentManager, movies!!)
             binding.viewPager.adapter = adapter
             binding.tabLayout.setupWithViewPager(binding.viewPager)
-            binding.viewPager.currentItem = adapter.count/2
+            binding.viewPager.currentItem = 0
         })
 
 

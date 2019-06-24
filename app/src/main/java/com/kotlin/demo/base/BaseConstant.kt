@@ -1,6 +1,8 @@
 package com.kotlin.demo.base
 
-interface BaseConstant {
+class BaseConstant {
 
-
+    companion object {
+        const val MOVIES_TAG: String = "movies"
+    }
 }
