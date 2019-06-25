@@ -13,7 +13,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".fragment.fragmenttab.ui.FragmentTabActivity"
+        <activity android:name="com.kotlin.demo.fragment.fragmentdynamic.ui.FragmentTabActivity"
                   android:screenOrientation="portrait"/>
         <activity android:name=".fragment.basic.BasicFragmentActivity" android:screenOrientation="portrait"/>
         <activity

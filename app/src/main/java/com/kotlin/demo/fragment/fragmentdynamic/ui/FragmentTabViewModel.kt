@@ -1,4 +1,4 @@
-package com.kotlin.demo.fragment.fragmenttab.ui
+package com.kotlin.demo.fragment.fragmentdynamic.ui
 
 import android.annotation.SuppressLint
 import android.arch.lifecycle.LiveData
@@ -6,7 +6,7 @@ import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.kotlin.demo.base.remote.AppWebServices
 import com.kotlin.demo.base.remote.RetrofitConfig
-import com.kotlin.demo.fragment.fragmenttab.dto.MoviesCategoryModel
+import com.kotlin.demo.fragment.fragmentdynamic.dto.MoviesCategoryModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 

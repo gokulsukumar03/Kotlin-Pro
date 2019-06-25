@@ -1,4 +1,4 @@
-package com.kotlin.demo.fragment.fragmenttab.dto
+package com.kotlin.demo.fragment.fragmentdynamic.dto
 
 import com.google.gson.annotations.SerializedName
 

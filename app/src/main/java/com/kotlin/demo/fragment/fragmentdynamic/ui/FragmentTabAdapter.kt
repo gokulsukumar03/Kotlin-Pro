@@ -1,9 +1,9 @@
-package com.kotlin.demo.fragment.fragmenttab.ui
+package com.kotlin.demo.fragment.fragmentdynamic.ui
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
-import com.kotlin.demo.fragment.fragmenttab.dto.MoviesCategoryModel
+import com.kotlin.demo.fragment.fragmentdynamic.dto.MoviesCategoryModel
 
 class FragmentTabAdapter(manager : FragmentManager,  val moviesCategory : List<MoviesCategoryModel>) : FragmentStatePagerAdapter(manager){
 

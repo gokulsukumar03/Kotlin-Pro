@@ -113,7 +113,7 @@ class BasicActivity : BaseActivity() {
         var data: String = value
     }
 
-    fun conditionWhileOperationExample() {
+    fun conditionWhenOperationExample() {
         val number: Int = 50
         when {
             number > 50 -> "Number is greater than 50"
@@ -121,7 +121,7 @@ class BasicActivity : BaseActivity() {
         }
     }
 
-    fun returnConditionWhileOperationExample(): Boolean {
+    fun returnConditionWhenOperationExample(): Boolean {
         val number: Int = 50
         val isGreater: Boolean = when {
             number > 50 -> true
@@ -129,6 +129,16 @@ class BasicActivity : BaseActivity() {
         }
         return isGreater
     }
+
+    fun whileExample() {
+        val items = listOf("apple", "banana", "kiwifruit")
+        var index = 0
+        while (index < items.size) {
+            println("item at $index is ${items[index]}")
+            index++
+        }
+    }
+
 
     fun conditionIfOperationExample(value: Int) {
         val message: String
@@ -262,5 +272,58 @@ class BasicActivity : BaseActivity() {
 
         }
 
+    }
+
+    fun stringConcat(){
+        val kotlin : String = "Kotlin"
+        val dev : String = "Development"
+
+        Log.d(AppConstant.LogCatName, "Its $kotlin $dev ...")
+
+    }
+
+    fun stringReplace(){
+        var a = 1
+        // simple name in template:
+        val s1 = "a is $a"
+
+        a = 2
+        // arbitrary expression in template:
+        val s2 = "${s1.replace("is", "was")}, but now is $a"
+    }
+
+    fun parseInt(str: String): Int? {
+        return str.toIntOrNull()
+    }
+
+    fun printProduct(arg1: String, arg2: String) {
+        val x = parseInt(arg1)
+        val y = parseInt(arg2)
+        if (x == null) {
+            println("Wrong number format in arg1: '$arg1'")
+            return
+        }
+        if (y == null) {
+            println("Wrong number format in arg2: '$arg2'")
+            return
+        }
+        println(x * y)
+    }
+
+    fun getStringLength(obj: Any): Int? {
+        if (obj is String) {
+            // `obj` is automatically cast to `String` in this branch
+            return obj.length
+        }
+
+        // `obj` is still of type `Any` outside of the type-checked branch
+        return null
+    }
+
+    fun getStringLength2(obj: Any): Int? {
+        if (obj !is String) return null
+
+        // `obj` is automatically cast to `String` in this branch
+        return obj.length
     }
 }

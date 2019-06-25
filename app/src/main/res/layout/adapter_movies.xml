@@ -4,7 +4,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <variable name="moviesModel" type="com.kotlin.demo.fragment.fragmenttab.dto.MoviesDetailModel"/>
+        <variable name="moviesModel" type="com.kotlin.demo.fragment.fragmentdynamic.dto.MoviesDetailModel"/>
     </data>
 
     <LinearLayout
@@ -17,22 +17,21 @@
                 android:id="@+id/card_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="12dp"
+                android:layout_margin="8dp"
                 app:cardCornerRadius="6dp"
                 app:cardElevation="2dp">
 
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="12dp"
                     android:orientation="vertical">
 
                 <ImageView
                         android:id="@+id/movie_image_view"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:layout_width="170dp"
+                        android:layout_height="180dp"
                         app:layout_constraintTop_toTopOf="parent"
+                        android:scaleType="fitXY"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -42,13 +41,14 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
-                        android:layout_marginLeft="4dp"
+                        android:layout_margin="2dp"
                         android:fontFamily="sans-serif-condensed"
                         android:textSize="12sp"
                         android:textColor="@color/black5"
                         android:singleLine="true"
                         android:maxLines="1"
                         android:ellipsize="end"
+                        android:visibility="gone"
                         android:text="@={moviesModel.title}"/>
 
                 <TextView
@@ -57,11 +57,12 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
-                        android:layout_marginLeft="4dp"
+                        android:layout_margin="2dp"
                         android:fontFamily="sans-serif-light"
                         android:textSize="9sp"
                         android:textColor="@color/black3"
                         android:singleLine="true"
+                        android:visibility="gone"
                         android:maxLines="1"
                         android:ellipsize="end"
                         android:text="@={moviesModel.overview}"/>

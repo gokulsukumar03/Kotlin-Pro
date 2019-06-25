@@ -1,4 +1,4 @@
-package com.kotlin.demo.fragment.fragmenttab.ui
+package com.kotlin.demo.fragment.fragmentdynamic.ui
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
@@ -7,7 +7,7 @@ import android.os.Bundle
 import com.kotlin.demo.R
 import com.kotlin.demo.base.activity.BaseActivity
 import com.kotlin.demo.databinding.ActivityFragmentTabBinding
-import com.kotlin.demo.fragment.fragmenttab.dto.MoviesCategoryModel
+import com.kotlin.demo.fragment.fragmentdynamic.dto.MoviesCategoryModel
 
 class FragmentTabActivity : BaseActivity() {
     override fun getScreenName(): String {

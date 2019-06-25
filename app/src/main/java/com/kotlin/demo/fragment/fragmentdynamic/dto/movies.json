@@ -1,0 +1,100 @@
+{
+  "category": [
+    {
+      "id" : 1,
+      "title": "Hollywood",
+      "movies": [{
+        "id" : 1,
+        "rating": 8,
+        "title": "THE SHINING",
+        "posterUri": "https://raw.githubusercontent.com/gokulsukumar03/File/master/movie1.jpeg",
+        "overview": "A young droid runner's discovery of a long-buried secret leads him to track down former droid runner Rick Droid, who's been missing for thirty years."
+      },
+        {
+          "id" : 2,
+          "title": "SHOOT OUT",
+          "rating": 7,
+          "posterUri": "https://raw.githubusercontent.com/gokulsukumar03/File/master/movie2.jpeg",
+          "overview": "A Google droid comes to the world of Man to become the greatest of the droid superheroes."
+        },
+        {
+          "id" : 3,
+          "title": "MAD MAX",
+          "rating": 10,
+          "posterUri": "https://raw.githubusercontent.com/gokulsukumar03/File/master/movie3.jpeg",
+          "overview": "A Google droid comes to the world of Man to become the greatest of the droid superheroes."
+        },
+        {
+          "id" : 4,
+          "title": "POPEYE",
+          "rating": 1,
+          "posterUri": "https://raw.githubusercontent.com/gokulsukumar03/File/master/movie4.jpeg",
+          "overview": "A Google droid comes to the world of Man to become the greatest of the droid superheroes."
+        },
+        {
+          "id" : 5,
+          "title": "NOWHERE IS SAFE",
+          "rating": 3,
+          "posterUri": "https://raw.githubusercontent.com/gokulsukumar03/File/master/movie5.jpeg",
+          "overview": "A Google droid comes to the world of Man to become the greatest of the droid superheroes."
+        },
+        {
+          "id" : 6,
+          "title": "CAPTAIN AMERICA",
+          "rating": 4,
+          "posterUri": "https://raw.githubusercontent.com/gokulsukumar03/File/master/movie6.jpeg",
+          "overview": "A Google droid comes to the world of Man to become the greatest of the droid superheroes."
+        },
+        {
+          "id" : 7,
+          "title": "ENDER'S GAME",
+          "rating": 5,
+          "posterUri": "https://raw.githubusercontent.com/gokulsukumar03/File/master/movie7.jpeg",
+          "overview": "A Google droid comes to the world of Man to become the greatest of the droid superheroes."
+        },
+        {
+          "id" : 8,
+          "title": "STAR WARS",
+          "rating": 8,
+          "posterUri": "https://raw.githubusercontent.com/gokulsukumar03/File/master/movie8.jpeg",
+          "overview": "A Google droid comes to the world of Man to become the greatest of the droid superheroes."
+        },
+        {
+          "id" : 9,
+          "title": "MR. HABIB OK",
+          "rating": 3,
+          "posterUri": "https://raw.githubusercontent.com/gokulsukumar03/File/master/movie9.jpeg",
+          "overview": "A Google droid comes to the world of Man to become the greatest of the droid superheroes."
+        },
+        {
+          "id" : 9,
+          "title": "A TEAM",
+          "rating": 9,
+          "posterUri": "https://raw.githubusercontent.com/gokulsukumar03/File/master/movie10.jpeg",
+          "overview": "A Google droid comes to the world of Man to become the greatest of the droid superheroes."
+        }
+      ]
+
+    },
+    {
+      "id" : 2,
+      "title": "Action",
+      "movies": [{
+        "id" : 1,
+        "rating": 8,
+        "title": "Droid Runner 2049",
+        "posterUri": "https://raw.githubusercontent.com/gokulsukumar03/File/master/movie10.jpeg",
+        "overview": "A young droid runner's discovery of a long-buried secret leads him to track down former droid runner Rick Droid, who's been missing for thirty years."
+      },
+        {
+          "id" : 2,
+          "title": "Wonder Droid",
+          "rating": 7,
+          "posterUri": "https://raw.githubusercontent.com/gokulsukumar03/File/master/movie9.jpeg",
+          "overview": "A Google droid comes to the world of Man to become the greatest of the droid superheroes."
+        }
+      ]
+
+    }
+  ]
+}

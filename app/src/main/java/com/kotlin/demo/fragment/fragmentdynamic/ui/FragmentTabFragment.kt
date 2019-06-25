@@ -1,4 +1,4 @@
-package com.kotlin.demo.fragment.fragmenttab.ui
+package com.kotlin.demo.fragment.fragmentdynamic.ui
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
@@ -11,8 +11,7 @@ import android.view.ViewGroup
 import com.kotlin.demo.R
 import com.kotlin.demo.base.BaseConstant
 import com.kotlin.demo.databinding.FragmentFragmentTabBinding
-import com.kotlin.demo.fragment.fragmenttab.dto.MoviesCategoryModel
-import com.kotlin.demo.fragment.fragmenttab.dto.MoviesDetailModel
+import com.kotlin.demo.fragment.fragmentdynamic.dto.MoviesCategoryModel
 
 class FragmentTabFragment : Fragment() {
 

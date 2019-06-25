@@ -1,14 +1,16 @@
-package com.kotlin.demo.fragment.fragmenttab.dto
+package com.kotlin.demo.fragment.fragmentdynamic.dto
 
 import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-import java.io.Serializable
 
 class MoviesDetailModel() : Parcelable {
 
-    @SerializedName("rating")
+    @SerializedName("id")
     var id: Int?=null
+
+    @SerializedName("rating")
+    var rating: Int?=null
 
     @SerializedName("title")
     var title: String?=null
@@ -21,6 +23,7 @@ class MoviesDetailModel() : Parcelable {
 
     constructor(parcel: Parcel) : this() {
         id = parcel.readValue(Int::class.java.classLoader) as? Int
+        rating = parcel.readValue(Int::class.java.classLoader) as? Int
         title = parcel.readString()
         posterUri = parcel.readString()
         overview = parcel.readString()
@@ -28,6 +31,7 @@ class MoviesDetailModel() : Parcelable {
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeValue(id)
+        parcel.writeValue(rating)
         parcel.writeString(title)
         parcel.writeString(posterUri)
         parcel.writeString(overview)

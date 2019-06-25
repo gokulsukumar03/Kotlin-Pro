@@ -1,7 +1,7 @@
 package com.kotlin.demo.base.remote
 
 import com.kotlin.demo.cricket.recyclerview.dto.PlayerDetailsModel
-import com.kotlin.demo.fragment.fragmenttab.dto.MoviesModel
+import com.kotlin.demo.fragment.fragmentdynamic.dto.MoviesModel
 import io.reactivex.Single
 import retrofit2.http.GET
 

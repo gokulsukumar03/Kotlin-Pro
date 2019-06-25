@@ -1,9 +1,8 @@
-package com.kotlin.demo.fragment.fragmenttab.dto
+package com.kotlin.demo.fragment.fragmentdynamic.dto
 
 import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-import java.io.Serializable
 
 class MoviesCategoryModel() : Parcelable {
 

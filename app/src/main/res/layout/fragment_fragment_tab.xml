@@ -4,14 +4,15 @@
     <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".fragment.fragmenttab.ui.FragmentTabFragment">
+            tools:context=".fragment.fragmentdynamic.ui.FragmentTabFragment">
 
 
         <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="24dp"/>
+                android:layout_margin="12dp"
+                android:paddingBottom="50dp"/>
 
 
     </FrameLayout>

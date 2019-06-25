@@ -1,0 +1,188 @@
+{
+  "players" : [
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/kedar.jpeg",
+      "playerName" :        "Kedar Jadhav",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "BAT",
+      "playerPoint" :       "5",
+      "playerCredit" :      "118",
+      "isPlayerSelected" :  false
+    },
+
+
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/rohit.jpeg",
+      "playerName" :        "Rohit Sharma",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "BAT",
+      "playerPoint" :       "4",
+      "playerCredit" :      "112",
+      "isPlayerSelected" :  false
+    },
+
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/rohit.jpeg",
+      "playerName" :        "Rohit Sharma",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "BAT",
+      "playerPoint" :       "34",
+      "playerCredit" :      "234",
+      "isPlayerSelected" :  false
+    },
+
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/shikhar.jpeg",
+      "playerName" :        "Shikhar Dhawan",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "BAT",
+      "playerPoint" :       "12",
+      "playerCredit" :      "124",
+      "isPlayerSelected" :  false
+    },
+
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/virat.jpeg",
+      "playerName" :        "Virat Kohli",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "BAT (C)",
+      "playerPoint" :       "6",
+      "playerCredit" :      "89",
+      "isPlayerSelected" :  false
+    },
+
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/hardik.jpeg",
+      "playerName" :        "Hardik Pandya",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "All",
+      "playerPoint" :       "12",
+      "playerCredit" :      "134",
+      "isPlayerSelected" :  false
+    },
+
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/ravindra.jpeg",
+      "playerName" :        "Ravindra Jadeja",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "All",
+      "playerPoint" :       "6",
+      "playerCredit" :      "70",
+      "isPlayerSelected" :  false
+    },
+
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/vijay.jpeg",
+      "playerName" :        "Vijay Shankar",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "BAT",
+      "playerPoint" :       "2",
+      "playerCredit" :      "89",
+      "isPlayerSelected" :  false
+    },
+
+
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/dinesh.jpeg",
+      "playerName" :        "Dinesh Karthik",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "All (WK)",
+      "playerPoint" :       "12",
+      "playerCredit" :      "170",
+      "isPlayerSelected" :  false
+    },
+
+
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/rahul.jpeg",
+      "playerName" :        "K. L. Rahul",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "BAT",
+      "playerPoint" :       "13",
+      "playerCredit" :      "163",
+      "isPlayerSelected" :  false
+    },
+
+
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/dhoni.jpeg",
+      "playerName" :        "MS Dhoni",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "BAT",
+      "playerPoint" :       "12",
+      "playerCredit" :      "250",
+      "isPlayerSelected" :  false
+    },
+
+
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/bhuvneshwar.jpeg",
+      "playerName" :        "Bhuvneshwar Kumar",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "BOW",
+      "playerPoint" :       "8",
+      "playerCredit" :      "190",
+      "isPlayerSelected" :  false
+    },
+
+
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/jasprit.jpeg",
+      "playerName" :        "Jasprit Bumrah",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "BOW",
+      "playerPoint" :       "2",
+      "playerCredit" :      "80",
+      "isPlayerSelected" :  false
+    },
+
+
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/kuldeep.jpeg",
+      "playerName" :        "Kuldeep Yadav",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "BOW",
+      "playerPoint" :       "11",
+      "playerCredit" :      "170",
+      "isPlayerSelected" :  false
+    },
+
+
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/mohammed.jpeg",
+      "playerName" :        "Mohammed Shami",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "BOW",
+      "playerPoint" :       "8",
+      "playerCredit" :      "90",
+      "isPlayerSelected" :  false
+    },
+
+
+    {
+      "playerImage" :       "https://raw.githubusercontent.com/gokulsukumar03/File/master/yuzvendra.jpeg",
+      "playerName" :        "Yuzvendra Chahal",
+      "playerGender" :      "M",
+      "playerCountry" :     "IND",
+      "playerMode" :        "BOW",
+      "playerPoint" :       "6",
+      "playerCredit" :      "100",
+      "isPlayerSelected" :  false
+    }
+  ]
+}

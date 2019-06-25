@@ -6,7 +6,7 @@ import android.arch.lifecycle.ViewModel
 import com.kotlin.demo.basic.BasicActivity
 import com.kotlin.demo.cricket.recyclerview.ui.PlayerRecyclerActivity
 import com.kotlin.demo.fragment.basic.BasicFragmentActivity
-import com.kotlin.demo.fragment.fragmenttab.ui.FragmentTabActivity
+import com.kotlin.demo.fragment.fragmentdynamic.ui.FragmentTabActivity
 
 class HomeViewModel : ViewModel(){
 
