@@ -3,10 +3,10 @@ package com.kotlin.demo.coroutines
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
-import com.kotlin.demo.base.remote.AppWebServices
-import com.kotlin.demo.base.remote.RetrofitConfig
+import com.kotlin.demo.base.remote.*
 import com.kotlin.demo.fragment.fragmentdynamic.dto.MoviesModel
 import kotlinx.coroutines.*
+import java.lang.Exception
 import kotlin.coroutines.CoroutineContext
 
 class CoroutinesViewModel : ViewModel(){
@@ -19,7 +19,9 @@ class CoroutinesViewModel : ViewModel(){
 
     private val scope = CoroutineScope(coroutineContext)
 
-    val appWebServices : AppWebServices = RetrofitConfig.createKotlin()
+    private val appWebServices : AppWebServices = RetrofitConfig.createKotlin()
+
+    val mEvents = MutableLiveData<Event>()
 
     fun fetchMoviesData() : LiveData<MoviesModel>{
         fetchMovies()
@@ -27,10 +29,16 @@ class CoroutinesViewModel : ViewModel(){
     }
 
     private fun fetchMovies(){
+        mEvents.value=LoadingEvent
         scope.launch {
-            val movies = appWebServices.getMovies()
-                moviesLiveData.postValue(movies.await())
-
+            try{
+                val movies = appWebServices.getMovies().await()
+                moviesLiveData.postValue(movies)
+                mEvents.postValue(SuccessEvent)
+            }
+            catch(throwable : Throwable){
+                mEvents.postValue(FailedEvent(throwable))
+            }
         }
     }
 
