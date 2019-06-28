@@ -54,17 +54,23 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:scaleY="3"
                 app:layout_constraintTop_toBottomOf="@id/header_layout"
                 android:indeterminateOnly="true"
-                android:indeterminateDuration="1"
-                />
+                android:indeterminateDuration="1"/>
 
+        <View
+                android:id="@+id/claimed_indicator_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white_eeeeee"
+                app:layout_constraintTop_toBottomOf="@id/progress_horizontal"/>
 
         <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/progress_horizontal"/>
+                app:layout_constraintTop_toBottomOf="@id/claimed_indicator_view"/>
 
     </android.support.constraint.ConstraintLayout>
 </layout>

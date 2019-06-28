@@ -3,9 +3,11 @@ package com.kotlin.demo.cricket.recyclerview.ui
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
+import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.View
 import android.view.WindowManager
 import com.kotlin.demo.R
 import com.kotlin.demo.base.activity.BaseActivity
@@ -44,6 +46,7 @@ class PlayerRecyclerActivity : BaseActivity() {
         playerRecyclerViewModel.getAllPlayer().observe(this, Observer<List<PlayerModel>> { playerModelList->
             playerRecyclerAdapter = PlayerRecyclerAdapter(this, playerModelList)
             binding.recyclerView.adapter = playerRecyclerAdapter
+            binding.progressHorizontal.visibility=View.GONE
         })
     }
 }

@@ -3,7 +3,9 @@ package com.kotlin.demo.fragment.fragmentdynamic.ui
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
+import android.opengl.Visibility
 import android.os.Bundle
+import android.view.View
 import com.kotlin.demo.R
 import com.kotlin.demo.base.activity.BaseActivity
 import com.kotlin.demo.databinding.ActivityFragmentTabBinding
@@ -15,7 +17,7 @@ class FragmentTabActivity : BaseActivity() {
     }
 
     override fun setFullScreen(): Boolean {
-        return false
+        return true
     }
 
     private lateinit var binding : ActivityFragmentTabBinding
@@ -41,6 +43,9 @@ class FragmentTabActivity : BaseActivity() {
             binding.viewPager.adapter = adapter
             binding.tabLayout.setupWithViewPager(binding.viewPager)
             binding.viewPager.currentItem = 0
+            binding.progressHorizontal.visibility= View.GONE
+
+
         })
 
 
