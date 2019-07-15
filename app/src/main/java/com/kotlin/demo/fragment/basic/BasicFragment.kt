@@ -15,6 +15,4 @@ class BasicFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_contest, container, false)
     }
-
-
 }
