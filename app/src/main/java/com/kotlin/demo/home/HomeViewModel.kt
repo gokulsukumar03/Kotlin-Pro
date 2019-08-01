@@ -7,6 +7,8 @@ import com.kotlin.demo.animations.MyAnimationActivity
 import com.kotlin.demo.basic.BasicActivity
 import com.kotlin.demo.coroutines.CoroutinesActivity
 import com.kotlin.demo.cricket.recyclerview.ui.PlayerRecyclerActivity
+import com.kotlin.demo.expandablerecycler.ExpandableRecyclerActivity
+import com.kotlin.demo.expandablerecycler.ExpandableRecyclerAdapter
 import com.kotlin.demo.fragment.basic.BasicFragmentActivity
 import com.kotlin.demo.fragment.fragmentdynamic.ui.FragmentTabActivity
 import com.kotlin.demo.rxjava.RxJavaActivity
@@ -57,6 +59,11 @@ class HomeViewModel : ViewModel(){
         homeModel = HomeModel()
         homeModel.title = "Animation"
         homeModel.activityName = MyAnimationActivity().javaClass
+        homeModelList.add(homeModel)
+
+        homeModel = HomeModel()
+        homeModel.title = "Expandable-Recycler"
+        homeModel.activityName = ExpandableRecyclerActivity().javaClass
         homeModelList.add(homeModel)
 
         featureMutableLiveData.value = homeModelList
