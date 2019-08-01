@@ -3,11 +3,13 @@ package com.kotlin.demo.home
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
+import com.kotlin.demo.animations.MyAnimationActivity
 import com.kotlin.demo.basic.BasicActivity
 import com.kotlin.demo.coroutines.CoroutinesActivity
 import com.kotlin.demo.cricket.recyclerview.ui.PlayerRecyclerActivity
 import com.kotlin.demo.fragment.basic.BasicFragmentActivity
 import com.kotlin.demo.fragment.fragmentdynamic.ui.FragmentTabActivity
+import com.kotlin.demo.rxjava.RxJavaActivity
 
 class HomeViewModel : ViewModel(){
 
@@ -45,6 +47,16 @@ class HomeViewModel : ViewModel(){
         homeModel = HomeModel()
         homeModel.title = "Co-Routines"
         homeModel.activityName = CoroutinesActivity().javaClass
+        homeModelList.add(homeModel)
+
+        homeModel = HomeModel()
+        homeModel.title = "Rx-Java"
+        homeModel.activityName = RxJavaActivity().javaClass
+        homeModelList.add(homeModel)
+
+        homeModel = HomeModel()
+        homeModel.title = "Animation"
+        homeModel.activityName = MyAnimationActivity().javaClass
         homeModelList.add(homeModel)
 
         featureMutableLiveData.value = homeModelList

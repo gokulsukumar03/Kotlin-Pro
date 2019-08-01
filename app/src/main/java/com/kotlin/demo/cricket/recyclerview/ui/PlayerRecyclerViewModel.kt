@@ -32,7 +32,6 @@ class PlayerRecyclerViewModel : ViewModel() {
             }, { error ->
                 error.message
             })
-
     }
 }
 

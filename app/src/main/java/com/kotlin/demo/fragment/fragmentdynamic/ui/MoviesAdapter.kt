@@ -2,6 +2,7 @@ package com.kotlin.demo.fragment.fragmentdynamic.ui
 
 import android.content.Context
 import android.databinding.DataBindingUtil
+import android.os.Handler
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -15,6 +16,8 @@ class MoviesAdapter(var context: Context, var moviesList: List<MoviesDetailModel
     private lateinit var binding : AdapterMoviesBinding
     private lateinit var movies : MoviesDetailModel
     private lateinit var layoutInflater: LayoutInflater
+    private lateinit var handler: Handler
+    private lateinit var runnable: Runnable
 
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, groudId: Int): ViewHolder {
@@ -29,6 +32,11 @@ class MoviesAdapter(var context: Context, var moviesList: List<MoviesDetailModel
         movies = moviesList[position]
         holder.holderBinding.moviesModel = movies
         Glide.with(context).load(movies.posterUri).into(holder.holderBinding.movieImageView)
+
+        handler = Handler()
+        runnable = Runnable {  holder.holderBinding.movieNameTv.x=20f }
+        handler.postDelayed(runnable, 2000)
+
     }
 
     inner class ViewHolder(var holderBinding : AdapterMoviesBinding) : RecyclerView.ViewHolder(binding.root)
