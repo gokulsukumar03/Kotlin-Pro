@@ -1,14 +1,18 @@
 package com.kotlin.demo.basic
 
+import android.app.ActivityManager
+import android.content.Context
+import android.content.Intent
 import android.databinding.DataBindingUtil
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.kotlin.demo.R
 import com.kotlin.demo.base.activity.BaseActivity
 import com.kotlin.demo.databinding.ActivityBasicBinding
 import com.kotlin.demo.home.AppConstant
 import com.kotlin.demo.java.DataTypeConvert
+import com.kotlin.demo.services.MyService
+import android.annotation.SuppressLint
+
 
 // https://kotlinlang.org/docs/reference/
 class BasicActivity : BaseActivity() {
@@ -59,10 +63,11 @@ class BasicActivity : BaseActivity() {
 
     private var countryList: Array<String> = arrayOf("India", "Japan", "USA", "China", "Africa")
 
+    val myService = MyService::class.java
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_basic)
+        binding = DataBindingUtil.setContentView(this, com.kotlin.demo.R.layout.activity_basic)
         binding.toolBar.setTitle(localClassName)
         setSupportActionBar(binding.toolBar)
         nonConstantValue = "Kotlin"
@@ -326,4 +331,43 @@ class BasicActivity : BaseActivity() {
         // `obj` is automatically cast to `String` in this branch
         return obj.length
     }
+
+    fun startMyService(){
+        //val myService = MyService::class.java
+        var intent : Intent?=null
+        intent = Intent(this@BasicActivity, myService)
+        startService(intent)
+        stopService(intent)
+
+    }
+
+
+    // Custom method to determine whether a service is running
+    private fun isServiceRunning(serviceClass: Class<*>): Boolean {
+        val activityManager = getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+
+        // Loop through the running services
+        for (service in activityManager.getRunningServices(Integer.MAX_VALUE)) {
+            if (serviceClass.name == service.service.className) {
+                // If the service is running then return true
+                return true
+            }
+        }
+        return false
+    }
+
+    @SuppressLint("MissingPermission")
+    private fun bring2Front(context: Context) {
+        val activtyManager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+        val runningTaskInfos = activtyManager.getRunningTasks(3)
+        activtyManager.runningAppProcesses
+        for (runningTaskInfo in runningTaskInfos) {
+            if (context.packageName == runningTaskInfo.topActivity.packageName) {
+                activtyManager.moveTaskToFront(runningTaskInfo.id, ActivityManager.MOVE_TASK_WITH_HOME)
+                return
+            }
+        }
+    }
+
 }
+

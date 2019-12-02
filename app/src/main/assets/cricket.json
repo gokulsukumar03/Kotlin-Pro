@@ -1,0 +1,562 @@
+{
+  "data": {
+    "max_player_limit": 11,
+    "credits": 120,
+    "is_announced": false,
+    "teams": [
+      {
+        "id": 421,
+        "name": "CSK",
+        "max_players_count": 7,
+        "min)players_count" : 4,
+        "team_image": ""
+      },
+      {
+        "id": 411,
+        "name": " RCB",
+        "max_players_count": 7,
+        "min)players_count" : 4,
+        "team_image": ""
+      }
+    ],
+    "player_groups": [
+      {
+        "group_id": "Bowler",
+        "role": "Bowler",
+        "group": "Bowler",
+        "max_selection_count_per_group": 4,
+        "min_selection_count_per_group": 2,
+        "players": [
+          {
+            "role": "Bowler",
+            "player_name": "Raju Lal Choudhary",
+            "player_id": 12,
+            "is_playing": false,
+            "credits": 13,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": "CSK"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Mahender Singh",
+            "player_id": 14,
+            "is_playing": false,
+            "credits": 14.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Sandeep",
+            "player_id": 19,
+            "is_playing": false,
+            "credits": 12.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Ajay",
+            "player_id": 20,
+            "is_playing": false,
+            "credits": 10.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Amit Sheoran",
+            "player_id": 23,
+            "is_playing": false,
+            "credits": 13.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Ankit",
+            "player_id": 25,
+            "is_playing": false,
+            "credits": 11.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Young Chang Ko",
+            "player_id": 115,
+            "is_playing": false,
+            "credits": 12.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Vijay Kumar",
+            "player_id": 136,
+            "is_playing": false,
+            "credits": 11,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Fazel Atrachali",
+            "player_id": 187,
+            "is_playing": false,
+            "credits": 16,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Rajaguru Subramanian",
+            "player_id": 211,
+            "is_playing": false,
+            "credits": 13.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Surinder Singh",
+            "player_id": 212,
+            "is_playing": false,
+            "credits": 14.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Anil",
+            "player_id": 218,
+            "is_playing": false,
+            "credits": 12.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Mohit Sehrawat",
+            "player_id": 242,
+            "is_playing": false,
+            "credits": 10.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Aman",
+            "player_id": 243,
+            "is_playing": false,
+            "credits": 11.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Saurabh Nandal",
+            "player_id": 244,
+            "is_playing": false,
+            "credits": 11,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Harsh Vardhan",
+            "player_id": 313,
+            "is_playing": false,
+            "credits": 11,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          },
+          {
+            "role": "Bowler",
+            "player_name": "Harendra Kumar",
+            "player_id": 314,
+            "is_playing": false,
+            "credits": 12.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          }
+        ],
+        "group_icon": "",
+        "group_name": "Bowler"
+      },
+      {
+        "group_id": "Allrounder",
+        "role": "Allrounder",
+        "group": "Allrounder",
+        "max_selection_count_per_group": 2,
+        "min_selection_count_per_group": 1,
+        "players": [
+          {
+            "role": "Allrounder",
+            "player_name": "Ashish Sangwan",
+            "player_id": 9,
+            "is_playing": false,
+            "credits": 14.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Allrounder",
+            "player_name": "Sandeep Narwal",
+            "player_id": 179,
+            "is_playing": false,
+            "credits": 14.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          },
+          {
+            "role": "Allrounder",
+            "player_name": "Sanjay Shrestha",
+            "player_id": 182,
+            "is_playing": false,
+            "credits": 11.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Allrounder",
+            "player_name": "Mohit Balyan",
+            "player_id": 224,
+            "is_playing": false,
+            "credits": 12,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          },
+          {
+            "role": "Allrounder",
+            "player_name": "Ajinkya Kapre",
+            "player_id": 315,
+            "is_playing": false,
+            "credits": 12.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          }
+        ],
+        "group_icon": "",
+        "group_name": "Allrounder"
+      },
+      {
+        "group_id": "Batsman",
+        "role": "Batsman",
+        "group": "Batsman",
+        "max_selection_count_per_group": 3,
+        "min_selection_count_per_group": 1,
+        "players": [
+          {
+            "role": "Batsman",
+            "player_name": "Rohit Kumar",
+            "player_id": 1,
+            "is_playing": false,
+            "credits": 16,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Batsman",
+            "player_name": "Pawan Sehrawat",
+            "player_id": 6,
+            "is_playing": false,
+            "credits": 17,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Batsman",
+            "player_name": "Sumit Singh",
+            "player_id": 8,
+            "is_playing": false,
+            "credits": 13.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Batsman",
+            "player_name": "Dong Geon Lee",
+            "player_id": 56,
+            "is_playing": false,
+            "credits": 13.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          },
+          {
+            "role": "Batsman",
+            "player_name": "Athul MS",
+            "player_id": 158,
+            "is_playing": false,
+            "credits": 13.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          },
+          {
+            "role": "Batsman",
+            "player_name": "Lal Mohar Yadav",
+            "player_id": 168,
+            "is_playing": false,
+            "credits": 11.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Batsman",
+            "player_name": "Abhishek Singh",
+            "player_id": 190,
+            "is_playing": false,
+            "credits": 15,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          },
+          {
+            "role": "Batsman",
+            "player_name": "Arjun Deshwal",
+            "player_id": 196,
+            "is_playing": false,
+            "credits": 12.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          },
+          {
+            "role": "Batsman",
+            "player_name": "Gaurav Kumar",
+            "player_id": 200,
+            "is_playing": false,
+            "credits": 12.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          },
+          {
+            "role": "Batsman",
+            "player_name": "Rohit Baliyan",
+            "player_id": 206,
+            "is_playing": false,
+            "credits": 14.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          },
+          {
+            "role": "Batsman",
+            "player_name": "Banty",
+            "player_id": 240,
+            "is_playing": false,
+            "credits": 11.5,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Batsman",
+            "player_name": "Vinod Kumar",
+            "player_id": 241,
+            "is_playing": false,
+            "credits": 13,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 411,
+              "name": " CSK"
+            }
+          },
+          {
+            "role": "Batsman",
+            "player_name": "Navneet",
+            "player_id": 311,
+            "is_playing": false,
+            "credits": 12,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          },
+          {
+            "role": "Batsman",
+            "player_name": "Vinoth Kumar",
+            "player_id": 312,
+            "is_playing": false,
+            "credits": 13,
+            "points": 0,
+            "is_selected": false,
+            "player_image": " ",
+            "team": {
+              "id": 421,
+              "name": "RCB"
+            }
+          }
+        ],
+        "group_icon": "",
+        "group_name": "Batsman"
+      }
+    ]
+  }
+}

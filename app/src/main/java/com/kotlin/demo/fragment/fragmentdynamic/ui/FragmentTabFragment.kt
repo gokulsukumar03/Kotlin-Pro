@@ -21,10 +21,6 @@ class FragmentTabFragment : Fragment() {
     private lateinit var moviesAdapter: MoviesAdapter
     private lateinit var movieCategoryData : MoviesCategoryModel
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     companion object {
         fun newInstance(moviesCategoryModel: MoviesCategoryModel): FragmentTabFragment {
             val args = Bundle()

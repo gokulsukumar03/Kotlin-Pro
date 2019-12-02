@@ -13,6 +13,17 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <service
+                android:name=".services.MyService"
+                android:enabled="true"
+                android:exported="true">
+        </service>
+
+        <activity
+                android:name=".dream11.ui.DreamActivity"
+                android:label="@string/title_activity_dream11"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity android:name=".expandablerecycler.ExpandableRecyclerActivity">
         </activity>
         <activity android:name=".animations.MyAnimationActivity">

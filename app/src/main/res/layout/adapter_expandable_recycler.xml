@@ -30,7 +30,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                 <TextView
                         android:id="@+id/categoryName"
@@ -46,6 +46,14 @@
                         android:maxLines="1"
                         android:text="Test"
                         android:ellipsize="end"/>
+
+                <ImageView
+                        android:id="@+id/dropDown"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="40dp"
+                        android:src="@drawable/dropdown"
+                        android:layout_gravity="center"/>
 
             </LinearLayout>
 

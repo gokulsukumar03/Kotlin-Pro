@@ -6,5 +6,6 @@ class RemoteConstant {
         const val BASE_URL: String = "https://api.myjson.com/bins/"
         const val GET_PLAYER : String  = "mrl67"
         const val GET_MOVIES : String = "oeksh"
+        const val GET_DREAM_TEAM : String = ""
     }
 }
