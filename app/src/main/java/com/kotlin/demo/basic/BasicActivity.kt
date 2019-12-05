@@ -12,6 +12,9 @@ import com.kotlin.demo.home.AppConstant
 import com.kotlin.demo.java.DataTypeConvert
 import com.kotlin.demo.services.MyService
 import android.annotation.SuppressLint
+import com.kotlin.demo.BaseConfig
+import com.kotlin.demo.BuildConfig
+import java.util.stream.IntStream
 
 
 // https://kotlinlang.org/docs/reference/
@@ -367,6 +370,23 @@ class BasicActivity : BaseActivity() {
                 return
             }
         }
+    }
+
+    private fun testProductFlavour(){
+
+        var test  = BuildConfig.FLAVOR
+        test = BuildConfig.VERSION_NAME
+
+        val te = BaseConfig.BASE_STRING
+    }
+
+    private fun avoidForLoop(){
+
+        var userList   = ArrayList<SecondaryConstructorModel>()
+        userList[0].userAge
+
+        userList.forEach { user-> user.userAge }
+
     }
 
 }

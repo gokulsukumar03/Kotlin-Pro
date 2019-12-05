@@ -28,8 +28,9 @@ android {
     dataBinding {
         enabled = true
     }
+
     flavorDimensions "default"
-    productFlavors{
+    productFlavors {
         admin {
             applicationIdSuffix ".admin"
             versionNameSuffix "-admin"
@@ -41,6 +42,11 @@ android {
         }
     }
 
+    sourceSets {
+        admin { java.srcDirs = ['src/admin/java', 'src/admin/java/'] } 
+        user {java.srcDirs = ['src/user/java', 'src/user/java/'] }
+        main { java.srcDirs = ['src/main/java', 'src/user/java'] }
+    }
 }
 
 dependencies {
@@ -98,7 +104,6 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutineVersion"
 
     implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
-
 
 
 }

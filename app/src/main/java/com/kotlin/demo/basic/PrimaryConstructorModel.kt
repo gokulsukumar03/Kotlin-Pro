@@ -1,6 +1,6 @@
 package com.kotlin.demo.basic
 
-class PrimaryConstructorModel(var name: String) {
+class   PrimaryConstructorModel(var name: String) {
 
     var userName: String = this.name
 
