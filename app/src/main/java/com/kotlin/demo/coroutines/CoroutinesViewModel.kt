@@ -39,6 +39,7 @@ class CoroutinesViewModel : ViewModel(){
             catch(throwable : Throwable){
                 mEvents.postValue(FailedEvent(throwable))
             }
+
         }
     }
 

@@ -14,11 +14,11 @@ import com.kotlin.demo.services.MyService
 import android.annotation.SuppressLint
 import com.kotlin.demo.BaseConfig
 import com.kotlin.demo.BuildConfig
-import java.util.stream.IntStream
-
 
 // https://kotlinlang.org/docs/reference/
 class BasicActivity : BaseActivity() {
+
+
     override fun setFullScreen(): Boolean {
       return false
     }
@@ -74,6 +74,8 @@ class BasicActivity : BaseActivity() {
         binding.toolBar.setTitle(localClassName)
         setSupportActionBar(binding.toolBar)
         nonConstantValue = "Kotlin"
+
+        kotlinAbstractEng()
     }
 
     override fun onResume() {
@@ -388,6 +390,22 @@ class BasicActivity : BaseActivity() {
         userList.forEach { user-> user.userAge }
 
     }
+
+
+    private fun kotlinAbstractEng(){
+
+        val kotlinAbstract : KotlinAbstract
+
+        kotlinAbstract = object : KotlinAbstract(){
+            override fun manipulateData(a: Int, b: Int): Int {
+                return a+b
+            }
+        }
+
+        Log.d("@@@ callign getValue", String.format("%s",kotlinAbstract.getValue(3,2)))
+        Log.d("@@@ callign getValue", String.format("%s",kotlinAbstract.manipulateData(5,5)))
+    }
+
 
 }
 
