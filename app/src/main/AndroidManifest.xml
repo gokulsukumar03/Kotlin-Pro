@@ -13,6 +13,9 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".unittesting.MyJUnitActivity">
+        </activity>
+
         <service
                 android:name=".services.MyService"
                 android:enabled="true"

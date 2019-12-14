@@ -12,6 +12,7 @@ import com.kotlin.demo.expandablerecycler.ExpandableRecyclerAdapter
 import com.kotlin.demo.fragment.basic.BasicFragmentActivity
 import com.kotlin.demo.fragment.fragmentdynamic.ui.FragmentTabActivity
 import com.kotlin.demo.rxjava.RxJavaActivity
+import com.kotlin.demo.unittesting.MyJUnitActivity
 
 class HomeViewModel : ViewModel(){
 
@@ -26,6 +27,13 @@ class HomeViewModel : ViewModel(){
 
 
     private fun generateFeatureData(){
+
+        homeModel = HomeModel()
+        homeModel.title = "JUnit"
+        homeModel.activityName = MyJUnitActivity().javaClass
+        homeModelList.add(homeModel)
+
+
         homeModel = HomeModel()
         homeModel.title = "Basic Kotlin"
         homeModel.activityName = BasicActivity().javaClass
