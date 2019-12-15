@@ -110,4 +110,7 @@ dependencies {
     testImplementation 'org.mockito:mockito-core:2.19.0'
     androidTestImplementation 'org.mockito:mockito-android:2.6.3'
     testImplementation 'org.mockito:mockito-inline:2.13.0'
+
+    implementation "androidx.room:room-runtime:2.2.2"
+    implementation "androidx.room:room-ktx:2.2.2"
 }

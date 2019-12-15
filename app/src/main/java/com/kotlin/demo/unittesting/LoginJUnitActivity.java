@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import androidx.room.RoomDatabase;
+import bergco.se.mvvm.model.Task;
 import com.kotlin.demo.R;
+import com.kotlin.demo.base.room.MyAppDatabase;
 
 public class LoginJUnitActivity extends AppCompatActivity {
 
@@ -38,6 +41,19 @@ public class LoginJUnitActivity extends AppCompatActivity {
                 verifyCredentials(login);
             }
         });
+
+        final MyAppDatabase appDatabase = MyAppDatabase.getInstance(this);
+        final Task task = new Task();
+        task.setTitle(" ddd");
+        task.setGroupId("ddd");
+        task.setDescription("ddffdfd");
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                appDatabase.tasksDAO().insertTask(task);
+            }
+        });
+
     }
 
     public LoginCredentials verify(){
