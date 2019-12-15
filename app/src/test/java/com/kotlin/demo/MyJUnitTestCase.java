@@ -3,12 +3,7 @@ package com.kotlin.demo;
 import com.kotlin.demo.base.remote.AppWebServices;
 import com.kotlin.demo.base.remote.RetrofitConfig;
 import com.kotlin.demo.unittesting.JunitDto;
-import com.kotlin.demo.unittesting.MyJUnitActivity;
 import io.reactivex.Observer;
-import io.reactivex.Scheduler;
-import io.reactivex.Single;
-import io.reactivex.SingleObserver;
-import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import org.junit.After;
@@ -18,10 +13,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-
-import static org.mockito.Mockito.*;
 
 @RunWith(JUnit4.class)
 public class MyJUnitTestCase {
@@ -31,9 +23,6 @@ public class MyJUnitTestCase {
     @Mock
     private AppWebServices appWebServices;
 
-    @Mock
-    MyJUnitActivity mActivity;
-
     @Before
     public void SETUP() throws Exception {
         MockitoAnnotations.initMocks(this);
@@ -41,8 +30,8 @@ public class MyJUnitTestCase {
 
     private JunitDto mJunitDto;
 
-
     @Test
+    @Before
     public void fetchUsers(){
         System.out.println("*******************  start");
       appWebServices = RetrofitConfig.Companion.create();
@@ -52,14 +41,13 @@ public class MyJUnitTestCase {
                 .subscribe(new Observer<JunitDto>() {
                     @Override
                     public void onSubscribe(Disposable d) {
-                        System.out.println("******************* d");
                     }
 
                     @Override
                     public void onNext(JunitDto junitDto) {
                         System.out.println("******************* onnext");
-                        System.out.println(junitDto.getResponseCode());
                         mJunitDto = junitDto;
+                        Assert.assertEquals(mJunitDto!=null, true);
                     }
 
                     @Override
@@ -69,78 +57,76 @@ public class MyJUnitTestCase {
 
                     @Override
                     public void onComplete() {
-                        System.out.println("******************* completed");
                     }
                 });
 
 
     }
 
-    @After
     @Test
+    @After
     public void MY_JUNIT_RESPONSE_IS_NULL() {
         Assert.assertEquals(mJunitDto!=null, true);
-        System.out.println("******************* ddfd");
-
+        System.out.println("******************* not null executed");
     }
-
     @Test
+    @After
     public void MY_JUNIT_RESPONSE_CODE_IS_NULL() {
-        if (mActivity.getUserData() != null) {
-            Assert.assertNull(mActivity.getUserData().getResponseCode());
-        }
-    }
-
-    @Test
-    public void MY_JUNIT_RESPONSE_CODE_IS_EMPTY() {
-        if (mActivity.getUserData() != null && mActivity.getUserData().getResponseCode() != null) {
-            Assert.assertFalse(mActivity.getUserData().getResponseCode().isEmpty());
+        if (mJunitDto != null) {
+            Assert.assertEquals(mJunitDto.getResponseCode()!=null, true);
+            System.out.println("******************* not null code ");
         }
     }
     @Test
+    @After
     public void MY_JUNIT_RESPONSE_CODE_IS_OK() {
-        if (mActivity.getUserData() != null && mActivity.getUserData().getResponseCode() != null) {
-            Assert.assertSame(mActivity.getUserData().getResponseCode(), HTTP_SUCCESS);
+        if (mJunitDto != null && mJunitDto.getResponseCode()!=null) {
+           Assert.assertEquals(mJunitDto.getResponseCode(), HTTP_SUCCESS);
+            System.out.println("*******************" +mJunitDto.getResponseCode());
         }
     }
-
     @Test
+    @After
     public void MY_JUNIT_RESPONSE_USERS_IS_NULL() {
-        if (mActivity.getUserData() != null) {
-            Assert.assertNull(mActivity.getUserData().getUsers());
+        if (mJunitDto != null) {
+            Assert.assertEquals(mJunitDto.getUsers()!=null, true);
+            System.out.println("******************* not null users list ");
         }
     }
-
     @Test
+    @After
     public void MY_JUNIT_RESPONSE_USER_IS_EMPTY() {
-        if (mActivity.getUserData() != null && mActivity.getUserData() != null && mActivity.getUserData().getUsers() != null) {
-            Assert.assertFalse(mActivity.getUserData().getUsers().size() > 0);
+        if (mJunitDto != null && mJunitDto.getUsers() != null) {
+            Assert.assertEquals(mJunitDto.getUsers().size() > 0, true);
+            System.out.println("******************* users list size " + mJunitDto.getUsers().size());
         }
     }
-
     @Test
+    @After
     public void MY_JUNIT_RESPONSE_USER_NAME_IS_EMPTY(){
-        if (mActivity.getUserData() != null && mActivity.getUserData() != null && mActivity.getUserData().getUsers() != null) {
-            for(int i=0; i<mActivity.getUserData().getUsers().size(); i++){
-                Assert.assertNull(mActivity.getUserData().getUsers().get(i).getName());
+        if (mJunitDto != null && mJunitDto.getUsers() != null && mJunitDto.getUsers().size()>0) {
+            for(int i=0; i<mJunitDto.getUsers().size(); i++){
+                Assert.assertNotNull(mJunitDto.getUsers().get(i).getName());
+                System.out.println("******************* users list size " + mJunitDto.getUsers().get(i).getName());
             }
         }
     }
-
     @Test
+    @After
     public void MY_JUNIT_RESPONSE_USER_TYPE_IS_EMPTY(){
-        if (mActivity.getUserData() != null && mActivity.getUserData() != null && mActivity.getUserData().getUsers() != null) {
-            for(int i=0; i<mActivity.getUserData().getUsers().size(); i++){
-                Assert.assertNull(mActivity.getUserData().getUsers().get(i).getType());
+        if (mJunitDto != null && mJunitDto.getUsers() != null && mJunitDto.getUsers().size()>0) {
+            for(int i=0; i<mJunitDto.getUsers().size(); i++){
+                Assert.assertNotNull(mJunitDto.getUsers().get(i).getType());
             }
         }
     }
-
     @Test
+    @After
     public void MY_JUNIT_RESPONSE_USER_COMPANY_IS_EMPTY(){
-        if (mActivity.getUserData() != null && mActivity.getUserData() != null && mActivity.getUserData().getUsers() != null) {
-            for(int i=0; i<mActivity.getUserData().getUsers().size(); i++){
-                Assert.assertNull(mActivity.getUserData().getUsers().get(i).getCompany());
+        if (mJunitDto != null && mJunitDto.getUsers() != null && mJunitDto.getUsers().size()>0) {
+            for(int i=0; i<mJunitDto.getUsers().size(); i++){
+                Assert.assertNotNull(mJunitDto.getUsers().get(i).getCompany());
+                System.out.println("company " + mJunitDto.getUsers().get(i).getCompany());
             }
         }
     }
